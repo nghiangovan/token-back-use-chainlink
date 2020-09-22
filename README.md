@@ -5,6 +5,119 @@
 
 ![](/imageReadme/cover.png)
 
+## Description
+
+Cashback is an e-commerce platform that allows users to purchase items for a payback in the form of HRC20. Each product will have a corresponding payback rate. After being reimbursed in HRC20 form, users can staking that amount of HRC20 to be able to Yield Farming to generate a corresponding ONE, after each day 2% of the HRC20 is converted to ONE. Users can withdraw the converted ONE at any time they want, however when withdrawing the HRC20 amount will be burned corresponding to the percentage of ONE withdrawn.
+
+## Functionality
+
+#### What CashBack does :
+
+- Users buy the product and get a 8.6% payback of the product value, which is created in the form of a Sun token. After each day, the amount of ONE newly created will be equal to 2% of the amount of Sun tokens the user is holding. This amount of One, users can withdraw to MathWallet at any time.
+
+- Users withdraw ONE interest generated from staking Sun. After ONE withdrawal, the amount of Sun tokens will be destroyed corresponding to the percentage of One withdrawn. **Example**: There are 20 ONE and 1000 Sun tokens, withdraw 10 ONE to the wallet, users will only have 500 Sun tokens. From there the interest per day will be calculated based on the remaining Sun tokens
+
+#### Chainlink integration
+
+- Aiming at the converting needs of buyers. We have integrated Chainlink blockchain technology to fetch the price of ONE and convert the price of the product from ONE to USD. This makes it easy for people to know how much the product is worth in USD.
+
+<p align="center">
+  <img src="/imageReadme/Harmony-Chainlink.jpeg" />
+</p>
+
+<p align="center">
+  <img src="/imageReadme/03-jeans.png" />
+</p>
+
+#### In the future:
+
+- First,we are building a cross-chain protocol with cosmos - this product will be like a the bridge between Harmony and ETH - from which users can buy and sell products on the Cashback floor with existing tokens.
+
+<p align="center">
+  <img src="/imageReadme/token.png" />
+</p>
+
+- Next we want to make Cashback a marketplace where people can sell their products at their own rates of return (the competition benefits the buyers). Successful transactions will be charged and this fee will be used to pay bonuses to those who are staking HRC20 cash back when buying items.
+
+<p align="center">
+  <img src="/imageReadme/marketplace.jpg" />
+</p>
+
+## How we built it
+
+Cashback is built on 2 smart contracts, Market and Point. Market is used to coordinate activities on exchanges such as buying, selling, withdrawing money, ... Contract Point is a temporarily customized HRC20 contract that cannot be transferred between accounts, but will only play the role is staking and to calculate the amount of daily ONE that a user will be paid for by staking.
+
+On the client side, we use vuejs to build, combined with harmony-sdk to help users interact with the application through MathWallet.Users buy and sell as well as keep HRC20 cash back through mathWallet
+
+## Activity diagram
+
+Users will have 2 main streams to interact with Cashback
+
+- Buy item activity :
+
+<p align="center">
+  <img src="/imageReadme/BuyDiagram.png" />
+</p>
+
+- Withdraw interest activity:
+
+<p align="center">
+  <img src="/imageReadme/WithdrawDiagram.png" />
+</p>
+
+## Using
+
+- Landing page:
+
+<p align="center">
+  <img src="/imageReadme/01-landing.png" />
+</p>
+
+- Market - Where you can choose product to buy:
+
+<p align="center">
+  <img src="/imageReadme/02-markets.png" />
+</p>
+
+- Select item:
+
+<p align="center">
+  <img src="/imageReadme/03-jeans.png" />
+</p>
+
+<p align="center">
+  <img src="/imageReadme/04-zoom.png" />
+</p>
+
+- You must sign in before buying and sign transaction:
+<p align="center">
+  <img src="/imageReadme/05-buy-01.png" />
+</p>
+
+- Transaction successful:
+
+<p align="center">
+  <img src="/imageReadme/06-buy-02.png" />
+</p>
+
+- Show purchased products:
+
+<p align="center">
+  <img src="/imageReadme/07-my-products.png" />
+</p>
+
+- Interest will be increased daily based on the amount of Sun coin you hold:
+
+<p align="center">
+  <img src="/imageReadme/08-account-01.png" />
+</p>
+
+- You can withdraw the interest at any time but the sun coin will be burned:
+
+<p align="center">
+  <img src="/imageReadme/09-account-02.png" />
+</p>
+
 ## Project setup (testnet)
 
 #### Setup contract :

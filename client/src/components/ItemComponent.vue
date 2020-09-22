@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     openTableVisible() {
-      this.$emit('openTableVisible', this.itemImg);
+      this.$emit('openTableVisible', { itemImg: this.itemImg, name: this.name });
     },
     buyProduct() {
       this.$emit('buyProduct', this.id, this.price);

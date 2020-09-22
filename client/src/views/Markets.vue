@@ -210,7 +210,7 @@ export default {
     return {
       tabOpening: null,
       outerVisible: false,
-      titleProduct: 'Product 01',
+      titleProduct: '',
       dialogTableVisible: false,
       num: 0,
       img:
@@ -279,11 +279,13 @@ export default {
               return false;
             }
           };
+          console.log(price);
           await market.methods
             .buy(id)
             .send({ ...options, value: price * 10 ** 18 })
             .then(e => {
               this.loading = false;
+              console.log(e);
               this.$message({
                 message: e.transaction.id,
                 type: 'success'
@@ -308,8 +310,10 @@ export default {
       }
       this.loading = false;
     },
-    openTableVisible(itemImg) {
+    openTableVisible(payload) {
+      let { itemImg, name } = payload;
       this.img = itemImg;
+      this.titleProduct = name;
       this.dialogTableVisible = true;
     },
     classification() {

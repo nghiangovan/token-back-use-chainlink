@@ -59,29 +59,6 @@
           </div>
         </div>
       </section>
-      <section class="if nx reveal-fade">
-        <div class="tcontainern opacity-0">
-          <div class="il rd i_ sk">
-            <ul class="st">
-              <li class="reveal-from-top">
-                <img src="@/assets/fonts/clients-01.svg" alt="Clients 01" />
-              </li>
-              <li class="reveal-from-bottom" data-reveal-delay="150">
-                <img src="@/assets/fonts/clients-02.svg" alt="Clients 02" />
-              </li>
-              <li class="reveal-from-top" data-reveal-delay="300">
-                <img src="@/assets/fonts/clients-03.svg" alt="Clients 03" />
-              </li>
-              <li class="reveal-from-bottom" data-reveal-delay="450">
-                <img src="@/assets/fonts/clients-04.svg" alt="Clients 04" />
-              </li>
-              <li class="reveal-from-top" data-reveal-delay="600">
-                <img src="@/assets/fonts/clients-05.svg" alt="Clients 05" />
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
     </main>
     <footer class="rr az">
       <div class="tcontainern opacity-0">
@@ -165,7 +142,7 @@
                 </li>
               </ul>
             </nav>
-            <div class="footer-copyright">© 2020 - Blockchain Research Team - Sun-Asterisk</div>
+            <div class="footer-copyright">© 2020 - Boomer Team</div>
           </div>
         </div>
       </div>
@@ -202,11 +179,9 @@ export default {
     min-height: 492px;
   }
 }
-
 .opacity-0 {
   opacity: 0;
 }
-
 .a-opacity-1 {
   opacity: 1;
   transform: translate(0);
